@@ -32,11 +32,11 @@ class Main extends PluginBase implements Listener {
                 }
                 $playerName = $player->getName();
                 if ($online) {
-                    $ip = $player->getAddress();
+                    //$ip = $player->getAddress();
                     $ping = $player->getPing();
                     $uuid = $player->getUniqueId();
                 } else {
-                    $ip = "Not available while player is offline.";
+                    //$ip = "Not available while player is offline.";
                     $ping = "Not available while player is offline.";
                     $uuid = "Not available while player is offline.";
                 }
@@ -45,7 +45,7 @@ class Main extends PluginBase implements Listener {
                 $whitelisted = $this->displayBool($player->isWhitelisted());     
                 $onlineFmt = $this->displayBool($online);           
                 
-                $stuffToLog = "Online: $onlineFmt\nName: $playerName\nIP Address: $ip\nPing: $ping\nUUID: $uuid\n\nOP: $op\nBanned: $banned\nWhitelisted: $whitelisted";
+                $stuffToLog = "Online: $onlineFmt\nName: $playerName\nPing: $ping\nUUID: $uuid\n\nOP: $op\nBanned: $banned\nWhitelisted: $whitelisted";
                 if ($sender instanceof Player) {
                     $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                     $form = $api->createSimpleForm(function( Player $recipient, int $result = null) use ($playerName, $player, $sender, $api) {
