@@ -1,0 +1,15 @@
+
+name: PlayerInspector
+version: 0.0.1
+main: DemoniqPvP\PlayerInspector\Main
+api: 3.22.2
+
+commands:
+  inspect:
+    description: Show details about a player, such as their IP address and their ping.
+    permission: playerinspector.command.inspect
+
+permissions:
+  playerinspector.command.inspect:
+    description: Permission to use the /inspect command to view details about a player.
+    default: op
