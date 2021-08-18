@@ -13,3 +13,5 @@ permissions:
   playerinspector.command.inspect:
     description: Permission to use the /inspect command to view details about a player.
     default: op
+  
+depend: FormAPI
